@@ -9,6 +9,7 @@
 <body>
 	<%
 	out.println("Kaixo Programa!");
+	out.println("Kaixo Git!");
 	%>
 </body>
 </html>
