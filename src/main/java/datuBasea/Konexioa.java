@@ -12,9 +12,9 @@ public class Konexioa {
 
 	public Konexioa() {
 		// Konexioaren datuak
-		this.url = "jdbc:mysql://localhost:3306/e2t1dbaplikazioa?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"; // Datu Base URL-a
-		this.erabiltzaile = "admin"; // Datu-Baseko erabiltzailea
-		this.pasahitza = "admin"; // Datu-Baseko pasahitza
+		this.url = "jdbc:mysql://localhost:3306/e2t1dbaplikazioa?useSSL=false&serverTimezone=UTC";// Datu Base URL-a
+		this.erabiltzaile = "root"; // Datu-Baseko erabiltzailea
+		this.pasahitza = "root"; // Datu-Baseko pasahitza
 	}
 
 	public Konexioa(String url, String erabiltzaile, String pasahitza) {
@@ -24,18 +24,31 @@ public class Konexioa {
 	}
 
 	public Connection konexioaBd() {
-
-		// Datu-basearekiko konexioa ezartzea (beti da berdina)
-
 		Connection konexioa = null;
+
 		try {
-			konexioa = DriverManager.getConnection(url, erabiltzaile, pasahitza); // Konexioaren datuak hartzen dira.
+			// 1. Cargar driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+
+			// 2. Establecer conexión
+			konexioa = DriverManager.getConnection(url, erabiltzaile, pasahitza);
+
 			if (konexioa != null) {
-				// System.out.println("✅ Konexioa eginda!");
+				System.out.println("✅ Konexioa eginda! URL: " + url);
+			} else {
+				System.err.println("❌ Konexioa NULL da!");
 			}
+
+		} catch (ClassNotFoundException e) {
+			System.err.println("❌ MySQL Driver-a ez dago: " + e.getMessage());
+			e.printStackTrace();
 		} catch (SQLException e) {
-			System.err.println("❌ Errorea konexioarekin: " + e.getMessage());
+			System.err.println("❌ SQL errorea: " + e.getMessage());
+			System.err.println("❌ URL: " + url);
+			System.err.println("❌ Erabiltzaile: " + erabiltzaile);
+			e.printStackTrace();
 		}
+
 		return konexioa;
 	}
 

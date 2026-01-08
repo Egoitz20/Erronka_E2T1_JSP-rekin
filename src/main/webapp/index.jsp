@@ -30,20 +30,18 @@ String errorea = (String) request.getParameter("errorea");
 	<%
 		if (loginSaiakerak > 0) {
 	%>
-	<p>
-		Oraindik geratzen zaizu:
-		<%=loginSaiakerak%>
-		saikerak.
-	</p>
+	<p>Oraindik geratzen zaizu: <%=loginSaiakerak%> saikerak.</p>
 	<%
 	}
 	%>
 	<%
 	}
 	%>
-	<form>
-		<label>Erabiltzailea:</label><br> <input type="text"
-			name=erabiltzailea><br> <label>Pasahitza:</label><br>
+	
+	<form method="post" action="prozesatuLogin.jsp">
+		<label>Erabiltzailea:</label><br> 
+		<input type="text" name=erabiltzailea><br> 
+		<label>Pasahitza:</label><br>
 		<input type="password" name=pasahitza><br> <input
 			type="submit" value="Sartu">
 	</form>
