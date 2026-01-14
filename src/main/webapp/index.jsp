@@ -1,4 +1,3 @@
-<%@page import="login.Sarbidea"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -23,27 +22,20 @@ String errorea = (String) request.getParameter("errorea");
 
 	<%
 		if (errorea != null) {
+			out.println(errorea);
+			
+			if (loginSaiakerak > 0) {
+				out.println("Oraindik geratzen zaizu: " + loginSaiakerak + " saikerak.");
+			}
+		}
 	%>
 	
-	<p><%=errorea%></p>
-	
-	<%
-		if (loginSaiakerak > 0) {
-	%>
-	<p>Oraindik geratzen zaizu: <%=loginSaiakerak%> saikerak.</p>
-	<%
-	}
-	%>
-	<%
-	}
-	%>
-	
-	<form method="post" action="prozesatuLogin.jsp">
+	<form method="post" action="login/prozesatuLogin.jsp">
 		<label>Erabiltzailea:</label><br> 
 		<input type="text" name=erabiltzailea><br> 
 		<label>Pasahitza:</label><br>
-		<input type="password" name=pasahitza><br> <input
-			type="submit" value="Sartu">
+		<input type="password" name=pasahitza><br> 
+		<input type="submit" value="Sartu">
 	</form>
 
 </body>
