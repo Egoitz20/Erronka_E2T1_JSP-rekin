@@ -3,6 +3,9 @@
 <%@ page import="datuBasea.LangileBean" %>
 <%@ page import="java.util.ArrayList" %>
 <%  
+/**
+* Langile guztiak erakusten ditu
+*/
     TaulakHandler handler = new TaulakHandler();
     ArrayList<LangileBean> langileList = handler.getLangile();
 %>

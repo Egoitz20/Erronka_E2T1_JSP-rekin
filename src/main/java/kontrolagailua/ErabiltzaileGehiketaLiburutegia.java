@@ -6,13 +6,34 @@ import java.sql.SQLException;
 
 import datuBasea.Konexioa;
 
+/**
+ * Sistemako erabiltzaileak sortzeko kudeaketa egiten duen Kontrolagailu/DAO klasea.
+ * ERABILTZAILEAK taulan sartzeko eragiketak inplementatzen ditu.
+ * 
+ * @version 1.0
+ * @see ErabiltzaileBean
+ */
+
 public class ErabiltzaileGehiketaLiburutegia {
 
 	private static final String ERABILTZAILE_GEHIKETA = "INSERT INTO ERABILTZAILEAK (IZENA, PASAHITZA) VALUES (?, ?)";
 
+	 /**
+     * Eraikitzaile lehenetsia.
+     */
+	
 	public ErabiltzaileGehiketaLiburutegia() {
 
 	}
+	
+	  /**
+     * Erabiltzaile berri bat gehitzen du datu-basean.
+     * SQL injekzioak ekiditeko PreparedStatement erabiltzen du.
+     * 
+     * @param izena Erabiltzaile-izen bakarra
+     * @param pasahitza Erabiltzailearen pasahitza (inplementazio honetan ez dago enkriptatuta)
+     * @throws SQLException datu-base eragiketaren errorea gertatzen bada
+     */
 
 	public void gehituErabiltzaile(String izena, String pasahitza) {
 		Konexioa db = new Konexioa(); // Datu Base objektua deitzen da, baina momentuz ez du ezer egiten.

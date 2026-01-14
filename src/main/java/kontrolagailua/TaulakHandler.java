@@ -11,17 +11,37 @@ import datuBasea.Konexioa;
 import datuBasea.LangileBean;
 import datuBasea.ProduktuBean;
 
-public class TaulakHandler {
+/**
+ * Taula guztietako datuak berreskuratzeko Kontrolagailu nagusia.
+     * Facade patroia inplementatzen du sistemako entitate guztiak kontsultatzeko
+     * interfaze bateratu bat eskaintzeko.
+ * 
+ * @version 1.0
+ */
 
+public class TaulakHandler {
+	
+	// Informazio ikuspegiak kontsultatzeko SQL konstanteak
+	
 	private static final String ERABILTZAILE_TAULA_BISTARATU = "SELECT * FROM ERABILTZAILE_INFO";
 	private static final String BEZERO_TAULA_BISTARATU = "SELECT * FROM BEZERO_INFO";
 	private static final String BILTEGI_TAULA_BISTARATU = "SELECT * FROM BILTEGI_INFO";
 	private static final String PRODUKTU_TAULA_BISTARATU = "SELECT * FROM PRODUKTU_INFO";
 	private static final String LANGILE_TAULA_BISTARATU = "SELECT * FROM LANGILE_INFO";
 
+	/**
+     * Eraikitzaile lehenetsia.
+     */
+	
 	public TaulakHandler() {
 	}
 
+	/**
+     * Sistemako erabiltzaile guztiak eskuratzen ditu.
+     * 
+     * @return ErabiltzaileBean-eko ArrayList erabiltzaile guztiekin
+     */
+	
 	public ArrayList<ErabiltzaileBean> getErabiltzaile() {
 
 		Konexioa db = new Konexioa();
@@ -61,6 +81,12 @@ public class TaulakHandler {
 		return taulaErabiltzaile;
 
 	}
+	
+	/**
+     * Sistemako bezero guztiak eskuratzen ditu.
+     * 
+     * @return BezeroBean-eko ArrayList bezero guztiekin
+     */
 	
 	public ArrayList<BezeroBean> getBezero() {
 
@@ -103,6 +129,12 @@ public class TaulakHandler {
 		return taulaBezero;
 
 	}
+	
+	/**
+     * Sistemako biltegi guztiak eskuratzen ditu.
+     * 
+     * @return BiltegiBean-eko ArrayList biltegi guztiekin
+     */
 	
 	public ArrayList<BiltegiBean> getBiltegi() {
 
@@ -149,6 +181,14 @@ public class TaulakHandler {
 		return taulaBiltegi;
 
 	}
+	
+	  
+	 /**
+     * Sistemako produktu guztiak eskuratzen ditu.
+     * Bezeroekin, saltzaileekin eta biltegiekin lotutako informazioa barne.
+     * 
+     * @return ProduktuBean-eko ArrayList produktu guztiekin
+     */
 	
 	public ArrayList<ProduktuBean> getProduktu() {
 
@@ -202,6 +242,13 @@ public class TaulakHandler {
 		return taulaProduktu;
 
 	}
+	
+	/**
+     * Sistemako langile guztiak eskuratzen ditu.
+     * Lanari eta soldatari buruzko informazio osoa barne.
+     * 
+     * @return LangileBean-eko ArrayList langile guztiekin
+     */
 	
 	public ArrayList<LangileBean> getLangile() {
 

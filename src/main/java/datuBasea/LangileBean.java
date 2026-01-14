@@ -2,19 +2,29 @@ package datuBasea;
 
 import java.sql.Date;
 
-public class LangileBean {
+/**
+ * Sistemako Langile (Enplegatu) entitatea irudikatzen duen JavaBean klasea.
+ * Enpresako langileen lanari eta informazio pertsonalari buruzko datuak ditu.
+ * 
+ * @version 1.0
+ */
 
-	private int id;
-	private String izena;
-	private String erabiltzailea;
-	private String pasahitza;
-	private String emaila;
-	private String telefonoa;
-	private Date kontratazioData;
-	private int idNagusi;
-	private int soldata;
-	private String lanpostua;
+public class LangileBean {
 	
+    private int id;                   /** Langilearen identifikatzaile bakarra */
+    private String izena;             /** Izen osoa */
+    private String erabiltzailea;     /** Sistemako erabiltzailea */
+    private String pasahitza;         /** Pasahitza */
+    private String emaila;            /** Enpresako posta elektronikoa */
+    private String telefonoa;         /** Kontakturako telefonoa */
+    private Date kontratazioData;     /** Kontratatze data */
+    private int idNagusi;             /** Ikuskatzaile/buruaren IDa */
+    private int soldata;              /** Soldata eurotan */
+    private String lanpostua;         /** Lanpostua */
+    
+    /**
+     * Langile huts bat hasieratzen duen eraikitzaile lehenetsia.
+     */
 	
 	public LangileBean() {
 	}

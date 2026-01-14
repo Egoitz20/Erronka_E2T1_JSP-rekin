@@ -1,4 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+/**
+ * XML sorrerako aukeraketarako menua.
+ * Sortutako XMLa ikusteko edo deskargatzeko aukera ematen du.
+ */ 
+ %>
 <!DOCTYPE html>
 <html>
 <body>

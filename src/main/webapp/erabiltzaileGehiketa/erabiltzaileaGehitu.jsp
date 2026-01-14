@@ -1,6 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    String erabiltzailea = (String) session.getAttribute("erabiltzailea");
+/**
+ * Sistemako erabiltzaile berriak gehitzeko formularioa.
+ * Pasahitzen baliozkotzea barne du (baieztapena).
+ * 
+ * @sessionAttribute erabiltzailea Uneko erabiltzailea
+ * @requestParameter mezua Arrakasta mezua
+ * @requestParameter errorea Errore mezua
+ */ 
+
+	String erabiltzailea = (String) session.getAttribute("erabiltzailea");
     String mezua = request.getParameter("mezua");
     String errorea = request.getParameter("errorea");
 %>

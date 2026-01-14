@@ -2,24 +2,38 @@ package datuBasea;
 
 import java.sql.Date;
 
-public class ProduktuBean {
+/**
+ * Sistemako Produktu entitatea irudikatzen duen JavaBean klasea.
+ * Produktuaren informazio osoa du, saltze, inbentario eta beste entitateekin
+ * dituen harremanen datuak barne.
+ * 
+ * Oharra: Existitzen den kodean inferitutako klasea, ez dago esplizituki definituta.
+ * 
+ * @version 1.0
+ */
 
-	private int id;
-	private String produktuIzena;
-	private String deskribapena;
-	private double balioa;
-	private double salneurria;
-	private String kategoriaIzena;
-	private int kopurua;
-	private Date eskaeraData;
-	private String eskaeraEgoera;
-	private String bezeroIzena;
-	private String bezeroEmaila;
-	private String saltzaileIzena;
-	private String saltzailea;
-	private String langileEmaila;
-	private int produktuKopuru;
-	private String biltegiIzena;
+public class ProduktuBean {
+	
+    private int id;                 /** Produktuaren identifikatzaile bakarra */
+    private String produktuIzena;   /** Produktuaren izena */
+    private String deskribapena;    /** Deskribapen xehatua */
+    private double balioa;          /** Kostu balioa */
+    private double salneurria;      /** Salmenta prezioa */
+    private String kategoriaIzena;  /** Produktuaren kategoria */
+    private int kopurua;            /** Stockean dagoen kantitatea */
+    private Date eskaeraData;       /** Eskaeraren data */
+    private String eskaeraEgoera;   /** Eskaeraren egoera */
+    private String bezeroIzena;     /** Erosle bezeroaren izena */
+    private String bezeroEmaila;    /** Bezeroaren posta elektronikoa */
+    private String saltzaileIzena;  /** Saltzailearen izena */
+    private String saltzailea;      /** Saltzailearen erabiltzailea */
+    private String langileEmaila;   /** Arduradun langilearen posta elektronikoa */
+    private int produktuKopuru;     /** Eskaeran dagoen produktu kopurua */
+    private String biltegiIzena;    /** Biltegiaren izena */
+    
+    /**
+     * Produktu huts bat hasieratzen duen eraikitzaile lehenetsia.
+     */
 	
 	public ProduktuBean() {
 	}

@@ -1,12 +1,21 @@
 package datuBasea;
 
+/**
+ * Sistemako Bezero (Kliente) entitatea irudikatzen duen JavaBean klasea.
+ * Bezero baten kontaktua eta datu pertsonalak ditu.
+ * 
+ * @version 1.0
+ */
 public class BezeroBean {
-
-	private int id;
-	private String izena;
-	private String helbidea;
-	private String emaila;
-	private String tlf;
+    private int id;           /** Bezeroaren identifikatzaile bakarra */
+    private String izena;     /** Bezeroaren izen osoa */
+    private String helbidea;  /** Helbide postalak */
+    private String emaila;    /** Posta elektronikoa */
+    private String tlf;       /** Telefono zenbakia */
+    
+    /**
+     * Bezero huts bat hasieratzen duen eraikitzaile lehenetsia.
+     */
 	
 	public BezeroBean() {
 	}

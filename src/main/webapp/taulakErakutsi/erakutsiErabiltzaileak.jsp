@@ -3,6 +3,9 @@
 <%@ page import="datuBasea.ErabiltzaileBean" %>
 <%@ page import="java.util.ArrayList" %>
 <%  
+/**
+* Erabiltzaile guztiak erakusten ditu
+*/
     TaulakHandler handler = new TaulakHandler();
     ArrayList<ErabiltzaileBean> erabiltzaileList = handler.getErabiltzaile();
 %>

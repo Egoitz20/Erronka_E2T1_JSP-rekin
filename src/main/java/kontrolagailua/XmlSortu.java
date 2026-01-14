@@ -7,13 +7,32 @@ import java.sql.Statement;
 
 import datuBasea.Konexioa;
 
+/**
+ * Langileen informazioa duten XML dokumentuak sortzeko Kontrolagailu klasea.
+ * Ikuspegi berezi bat kontsultatzen du eta XML dokumentu ongi osatua sortzen du.
+ * 
+ * @version 1.0
+ */
+
 public class XmlSortu {
 
 	private static final String LANGILE_INFORMAZIOA = "SELECT * FROM BISTA_LANGILE_INFORMAZIOA";
-
+	  
+    /**
+     * Eraikitzaile lehenetsia.
+     */
+	
 	public XmlSortu() {
 	}
 
+	/**
+     * Langile guztien informazio osoa duen XML dokumentua sortzen du.
+     * XML-ak datu pertsonalak, lan informazioa eta hierarkia egitura ditu.
+     * 
+     * @return String XML dokumentu osoarekin
+     * @throws SQLException datu-basea kontsultatzean errorea gertatzen bada
+     */
+	
 	public String xml() {
 		StringBuilder xml = new StringBuilder();
 		xml.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
@@ -84,6 +103,15 @@ public class XmlSortu {
 		xml.append("</langileak>");
 		return xml.toString();
 	}
+	
+	 /**
+     * XML karaktere bereziak ihesarazteko laguntzaile metodoa.
+     * &, <, >, ", ' karakterak bere HTML/XML entitate baliokideetan bihurtzen ditu.
+     * 
+     * @param input Ihesarazi beharreko testua
+     * @return Karaktere bereziak ihesarazitako testua
+     * @private
+     */
 
 	private String escapeXML(String input) {
 		if (input == null)

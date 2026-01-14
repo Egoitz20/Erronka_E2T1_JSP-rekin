@@ -3,6 +3,9 @@
 <%@ page import="datuBasea.BezeroBean" %>
 <%@ page import="java.util.ArrayList" %>
 <%  
+/**
+* Bezero guztiak erakusten ditu
+*/
     TaulakHandler handler = new TaulakHandler();
     ArrayList<BezeroBean> bezeroList = handler.getBezero();
 %>

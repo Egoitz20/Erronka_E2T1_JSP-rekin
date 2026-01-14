@@ -1,6 +1,15 @@
 <%@page import="kontrolagailua.XmlSortu"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%  
+<% 
+
+/**
+ * Sortutako XML eduki nabigatzailean erakusten du.
+ * XML sortzeko XmlSortu erabiltzen du eta formatu onean erakusten du.
+ * 
+ * @uses XmlSortu
+ * @output HTMLrako formatua eta ihesarazita dagoen XML
+ */
+ 
     String xmlContent = "";
     try {
         XmlSortu xmlSortu = new XmlSortu();
@@ -9,7 +18,6 @@
         out.println("Errorea: " + e.getMessage());
     }
     
-    // Escapear para HTML
     String escapedXml = "";
     if (!xmlContent.isEmpty()) {
         escapedXml = xmlContent.replace("&", "&amp;")

@@ -4,33 +4,63 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Konexioa {
+/**
+ * MySQL datu-basearekin konexioa kudeatzeko arduraduna den klasea.
+ * Datu-basearen konexioak eskaintzeko Singleton patroiaren antzekoa inplementatzen du.
+ * 
+ * @version 1.0
+ * @author Sistemaren Garatzailea
+ */
 
+public class Konexioa {
+	
 	private String url;
 	private String erabiltzaile;
 	private String pasahitza;
 
+	/**
+     * Lehenetsitako balioekin konexioa hasieratzen duen eraikitzailea.
+     * URL: jdbc:mysql://localhost:3306/e2t1dbaplikazioa
+     * Erabiltzailea: root
+     * Pasahitza: root
+     */
+	
 	public Konexioa() {
-		// Konexioaren datuak
-		this.url = "jdbc:mysql://localhost:3306/e2t1dbaplikazioa?useSSL=false&serverTimezone=UTC";// Datu Base URL-a
-		this.erabiltzaile = "root"; // Datu-Baseko erabiltzailea
-		this.pasahitza = "root"; // Datu-Baseko pasahitza
+		
+		this.url = "jdbc:mysql://localhost:3306/e2t1dbaplikazioa?useSSL=false&serverTimezone=UTC"; 
+		this.erabiltzaile = "root"; 
+		this.pasahitza = "root"; 
 	}
 
+	 /**
+     * Konexio pertsonalizatuak egiteko parametrodun eraikitzailea.
+     * 
+     * @param url Datu-basearen helbidea
+     * @param erabiltzaile Konexiorako erabiltzaile-izena
+     * @param pasahitza Konexiorako pasahitza
+     */
+	
 	public Konexioa(String url, String erabiltzaile, String pasahitza) {
+		
 		this.url = url;
 		this.erabiltzaile = erabiltzaile;
 		this.pasahitza = pasahitza;
 	}
 
+	/**
+     * Datu-basearekin konexioa ezartzen eta itzultzen du.
+     * MySQL-ren JDBC driverra kargatzen eta konexio erroreak kudeatzen ditu.
+     * 
+     * @return Connection datu-basearekin konexioa duen objektua
+     * @throws SQLException konektatzean errorea gertatzen bada
+     * @throws ClassNotFoundException JDBC driverra ez bada aurkitzen
+     */
+	
 	public Connection konexioaBd() {
 		Connection konexioa = null;
 
 		try {
-			// 1. Cargar driver
 			Class.forName("com.mysql.cj.jdbc.Driver");
-
-			// 2. Establecer conexión
 			konexioa = DriverManager.getConnection(url, erabiltzaile, pasahitza);
 
 			if (konexioa != null) {

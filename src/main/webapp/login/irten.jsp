@@ -1,6 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    // Invalidar sesión
+/**
+ * Erabiltzailearen saioa ixten du eta logina berri bideratzen du.
+ * 
+ * @action session.invalidate()
+ * @redirect index.jsp
+ */
     session.invalidate();
     response.sendRedirect("login.jsp");
 %>

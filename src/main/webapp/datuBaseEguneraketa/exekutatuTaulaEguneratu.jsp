@@ -1,6 +1,15 @@
 <%@page import="kontrolagailua.TaulaEguneratu"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+
+/**
+ * Langileen soldatak eguneratzen ditu.
+ * TaulaEguneratu klasea erabiltzen du.
+ * 
+ * @uses TaulaEguneratu
+ * @redirect datuBaseEguneratu.jsp
+ */
+ 
     String mezua = "";
     String errorea = "";
     

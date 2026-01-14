@@ -7,15 +7,34 @@ import java.sql.SQLException;
 
 import datuBasea.Konexioa;
 
+/**
+ * Datu-baseko datuak masiboki eguneratzeko Kontrolagailu klasea.
+ * Zehazki, langileen eta saltzaileen soldatak eguneratzen ditu.
+ * 
+ * @version 1.0
+ */
+
 public class TaulaEguneratu {
 
 	private static final String BULEGARI_LAPOSTU_ID_EKARRI = "SELECT ID FROM LANPOSTU";
 	private static final String SALTZAILE_SOLDATA_EGUNERATU = "UPDATE LANGILE INNER JOIN SALTZAILE ON LANGILE.ID = SALTZAILE.ID SET LANGILE.SOLDATA = 30000";
 	private static final String BULEGARI_SOLDATA_EGUNERATU = "UPDATE LANGILE INNER JOIN BULEGARI ON LANGILE.ID = BULEGARI.ID AND LANGILE.ID = ? SET LANGILE.SOLDATA = ?";
 
+	   
+	 /**
+     * Eraikitzaile lehenetsia.
+     */
+	
 	public TaulaEguneratu() {
 	}
 
+	 /**
+     * Saltzaile guztien soldata 30000-ra ezartzen du.
+     * Saltzaileak diren langileen LANGILE taula masiboki eguneratzen du.
+     * 
+     * @throws SQLException eguneraketan errorea gertatzen bada
+     */
+	
 	public void saltzaileSoldata() {
 
 		Konexioa db = new Konexioa();
@@ -37,6 +56,13 @@ public class TaulaEguneratu {
 
 	}
 
+	 /**
+     * Bulegarien (bulegari) soldata progresiboak ezartzen ditu.
+     * Lehenengoari 30000 esleitzen dio eta hurrengo bakoitzari 1000 gehitzen dio.
+     * 
+     * @throws SQLException kontsultan edo eguneraketan errorea gertatzen bada
+     */
+	
 	public void bulegariSoldata() {
 
 		Konexioa db = new Konexioa();

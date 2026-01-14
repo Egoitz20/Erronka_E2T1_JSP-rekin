@@ -1,4 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+/**
+ * Sistemako taula guztiak bistaratzeko menua.
+ * Bistaratzeko orri espezifikoetarako estekak ematen ditu.
+ */
+ %>
+
 <!DOCTYPE html>
 <html>
 <head>

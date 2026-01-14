@@ -2,6 +2,14 @@
 	pageEncoding="UTF-8"%>
 
 <%
+/**
+ * Sistemako login orri nagusia.
+ * Sartzeko saiakera-kontrola barne du (gehienez 4 saiakera).
+ * 
+ * @sessionAttribute loginSaiakerak Login saiakera-kontagailua
+ * @requestParameter errorea Erakutsi beharreko errore mezua
+ */
+ 
 // Saiakera-kontagailua hasieratu edo berreskuratu
 Integer loginSaiakerak = (Integer) session.getAttribute("loginSaiakerak");
 	if (loginSaiakerak == null) {

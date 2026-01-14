@@ -3,7 +3,9 @@
 <%@ page import="datuBasea.BiltegiBean" %>
 <%@ page import="java.util.ArrayList" %>
 <%
-    
+/**
+* Biltegi guztiak erakusten ditu
+*/
     TaulakHandler handler = new TaulakHandler();
     ArrayList<BiltegiBean> biltegiList = handler.getBiltegi();
 %>

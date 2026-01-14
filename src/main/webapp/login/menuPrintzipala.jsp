@@ -1,7 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    <% String erabiltzailea = (String) session.getAttribute("erabiltzailea"); %>
+    <% 
+    /**
+     * Sistemako menu nagusia saioa hasi ondoren.
+     * Sistemako funtzionalitate guztietara sarbidea ematen du.
+     * 
+     * @sessionAttribute erabiltzailea Saioa hasitako erabiltzailearen izena
+     * @links 
+     *   - erabiltzaileGehiketa/erabiltzaileaGehitu.jsp
+     *   - xml/xmlSortu.jsp
+     *   - datuBaseEguneraketa/datuBaseEguneratu.jsp
+     *   - taulakErakutsi/datuakErakutsi.jsp
+     *   - irten.jsp
+     */
+     
+    String erabiltzailea = (String) session.getAttribute("erabiltzailea"); %>
 <!DOCTYPE html>
 <html>
 <head>

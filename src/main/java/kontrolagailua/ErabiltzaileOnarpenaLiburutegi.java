@@ -8,12 +8,32 @@ import java.sql.SQLException;
 import datuBasea.Konexioa;
 
 
+/**
+ * Erabiltzaileen kredentzialak baliozkotzeko (login) Kontrolagailu/DAO klasea.
+ * Erabiltzaile/pasahitza bikote bat datu-basean dagoen egiaztatzen du.
+ * 
+ * @version 1.0
+ */
+
 public class ErabiltzaileOnarpenaLiburutegi {
 
 	private static final String LOGIN_BALIDATU = "SELECT izena FROM erabiltzaileak WHERE izena = ? AND pasahitza = ?";
 
+	 /**
+     * Eraikitzaile lehenetsia.
+     */
+	
 	public ErabiltzaileOnarpenaLiburutegi() {
 	}
+	
+	 /**
+     * Erabiltzaile baten kredentzialak baliozkotzen ditu.
+     * 
+     * @param izena Balioztatzeko erabiltzaile-izena
+     * @param pasahitza Balioztatzeko pasahitza
+     * @return true kredentzialak zuzenak badira, false bestela
+     * @throws SQLException kontsultan errorea gertatzen bada
+     */
 
 	public boolean erabiltzaileOnarpena(String izena, String pasahitza) {
 

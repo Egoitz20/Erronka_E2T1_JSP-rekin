@@ -1,5 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%
+/**
+ * Datu-basearen eguneraketa eragiketetarako menua.
+ * Egitura aldatzeko funtzionalitateetara sarbidea ematen du.
+ */
+
 String mezua = request.getParameter("mezua");
 String errorea = request.getParameter("errorea");
 %>

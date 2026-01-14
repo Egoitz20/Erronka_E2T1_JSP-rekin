@@ -1,6 +1,15 @@
 <%@page import="kontrolagailua.EremuaGehitu"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+
+/**
+ * SOLDATA eremua LANGILE taulan gehitzen du.
+ * EremuaGehitu klasea erabiltzen du.
+ * 
+ * @uses EremuaGehitu
+ * @redirect datuBaseEguneratu.jsp
+ */
+ 
     String mezua = "";
     String errorea = "";
     

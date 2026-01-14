@@ -1,6 +1,18 @@
 <%@page import="kontrolagailua.ErabiltzaileOnarpenaLiburutegi"%>
 <%
-    // Kontagailua berriro itzuli
+/**
+ * Formulariotik bidalitako login kredentzialak prozesatzen ditu.
+* Kredentzialak baliozkotzeko ErabiltzaileOnarpenaLiburutegi erabiltzen du.
+* 
+* @sessionAttribute loginSaiakerak Saiakera kontagailua
+* @sessionAttribute erabiltzailea Saioa hasitako erabiltzaile-izena
+* @requestParameter erabiltzailea Formularioko erabiltzailea
+* @requestParameter pasahitza Formularioko pasahitza
+* @redirect menuPrintzipala.jsp login arrakastatsua bada
+* @redirect index.jsp errore mezua eroriz huts egin badu
+*/
+
+// Kontagailua berriro itzuli
     Integer loginSaiakerak = (Integer) session.getAttribute("loginSaiakerak");
     if (loginSaiakerak == null) {
         loginSaiakerak = 4;

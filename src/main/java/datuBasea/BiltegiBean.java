@@ -1,16 +1,25 @@
 package datuBasea;
 
+/**
+ * Sistemako Biltegi (Almacén) entitatea irudikatzen duen JavaBean klasea.
+ * Biltegeen kokapen geografikoari eta informazioari buruzko datuak ditu.
+ * 
+ * @version 1.0
+ */
 public class BiltegiBean {
-
-	private int id;
-	private String izena;
-	private String helbidea;
-	private String postaKodea;
-	private String udalerria;
-	private String probintzia;
-	private String idHerrialde;
-	private String herrialde;
-	private String kontinente;
+    private int id;               /** Biltegiaren identifikatzaile bakarra */
+    private String izena;         /** Biltegiaren izena */
+    private String helbidea;      /** Helbide fisikoa */
+    private String postaKodea;    /** Posta kodea */
+    private String udalerria;     /** Udalerria */
+    private String probintzia;    /** Probintzia */
+    private String idHerrialde;   /** Herrialdearen kodea */
+    private String herrialde;     /** Herrialdearen izena */
+    private String kontinente;    /** Kontinentea */
+    
+    /**
+     * Biltegi huts bat hasieratzen duen eraikitzaile lehenetsia.
+     */
 	
 	public BiltegiBean() {
 	}

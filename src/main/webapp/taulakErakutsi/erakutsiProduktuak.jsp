@@ -3,6 +3,9 @@
 <%@ page import="datuBasea.ProduktuBean" %>
 <%@ page import="java.util.ArrayList" %>
 <%  
+/**
+* Produktu guztiak erakusten ditu
+*/
     TaulakHandler handler = new TaulakHandler();
     ArrayList<ProduktuBean> produktuList = handler.getProduktu();
 %>
