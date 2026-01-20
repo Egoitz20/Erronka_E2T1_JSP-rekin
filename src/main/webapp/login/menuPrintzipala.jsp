@@ -34,7 +34,7 @@
             <li><a href="../xml/xmlSortu.jsp">2. XML-a sortu</a></li>
             <li><a href="../datuBaseEguneraketa/datuBaseEguneratu.jsp">3. Datu-basea eguneratu</a></li>
             <li><a href="../taulakErakutsi/datuakErakutsi.jsp">4. Datuak erakutsi</a></li>
-            <li><a href="irten.jsp">5. Irten</a></li>
+            <li><a href="./irten.jsp">5. Irten</a></li>
         </ul>
     </div>
 </body>

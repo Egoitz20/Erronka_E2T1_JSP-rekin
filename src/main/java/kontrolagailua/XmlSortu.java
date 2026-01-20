@@ -68,7 +68,7 @@ public class XmlSortu {
 				}
 
 				String lanpostuDesc = rs.getString("LANPOSTU_DESK");
-				String erabiltzailea = rs.getString("ERABILTZALEA");
+				String erabiltzailea = rs.getString("ERABILTZAILEA");
 
 				if (lanpostuDesc != null && !lanpostuDesc.isEmpty()) {
 					xml.append("    <mota>bulegari</mota>\n");
@@ -80,7 +80,7 @@ public class XmlSortu {
 					xml.append("    <mota>saltzaile</mota>\n");
 					xml.append("    <erabiltzaile_informazioa>\n");
 					xml.append("        <erabiltzailea>").append(escapeXML(erabiltzailea)).append("</erabiltzailea>\n");
-					xml.append("        <egiaztagiria>").append(escapeXML(rs.getString("PASAHTIZA")))
+					xml.append("        <egiaztagiria>").append(escapeXML(rs.getString("PASAHITZA")))
 							.append("</egiaztagiria>\n");
 					xml.append("    </erabiltzaile_informazioa>\n");
 				} else {
