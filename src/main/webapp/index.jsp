@@ -25,26 +25,63 @@ String errorea = (String) request.getParameter("errorea");
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/styles/global.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/styles/index.css">
+<style>
+    .login-wrapper {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .login-card {
+        width: 100%;
+        max-width: 450px;
+    }
+</style>
 </head>
 <body>
-
-	<%
-		if (errorea != null) {
-			out.println(errorea);
-			
-			if (loginSaiakerak > 0) {
-				out.println("Oraindik geratzen zaizu: " + loginSaiakerak + " saikerak.");
-			}
-		}
-	%>
-	
-	<form method="post" action="login/prozesatuLogin.jsp">
-		<label>Erabiltzailea:</label><br> 
-		<input type="text" name=erabiltzailea><br> 
-		<label>Pasahitza:</label><br>
-		<input type="password" name=pasahitza><br> 
-		<input type="submit" value="Sartu">
-	</form>
+    <div class="login-wrapper">
+        <div class="card login-card fade-in">
+            <h1 class="text-center">GAMESTOP APLIKAZIOA</h1>
+            
+            <% if (errorea != null) { %>
+                <div class="alert alert-error">
+                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-content">
+                        <%= errorea %>
+                        <% if (loginSaiakerak > 0) { %>
+                            <div class="mt-1">
+                                <small>Saiakerak geratzen: <strong><%= loginSaiakerak %></strong></small>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+            <% } %>
+            
+            <form method="post" action="login/prozesatuLogin.jsp" class="mt-4">
+                <div class="form-group">
+                    <label class="form-label">Erabiltzailea:</label>
+                    <input type="text" name="erabiltzailea" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Pasahitza:</label>
+                    <input type="password" name="pasahitza" class="form-control" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-100 mt-3">
+                    Sartu sistema
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
 
 </body>
 </html>

@@ -17,32 +17,70 @@
 <html>
 <head>
     <title>Erabiltzailea Gehitu</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/styles/global.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/styles/formulario.css">
 </head>
 <body>
-    <h1>Erabiltzailea Gehitu</h1>
+    <div class="app-header">
+        <div class="header-content">
+            <a href="../login/menuPrintzipala.jsp" class="logo">
+                <div class="logo-icon">←</div>
+                <span>Erabiltzailea Gehitu</span>
+            </a>
+        </div>
+    </div>
     
-    <% if (mezua != null) { %>
-        <p><%= mezua %></p>
-    <% } %>
-    
-    <% if (errorea != null) { %>
-        <p style="color: red;"><%= errorea %></p>
-    <% } %>
-    
-    <form action="prozesatuErabiltzaileGehiketa.jsp" method="post">
-        <label>Sartu erabiltzaile berriaren izena:</label><br>
-        <input type="text" name="erabiltzaileBerria" required><br><br>
-        
-        <label>Sartu sortzeko erabiltzailearen pasahitza:</label><br>
-        <input type="password" name="pasahitzaSortu" required><br><br>
-        
-        <label>Berridatzi pasahitza:</label><br>
-        <input type="password" name="pasahitzaKonfirmazioa" required><br><br>
-        
-        <input type="submit" value="Gehitu">
-    </form>
-    
-    <br>
-    <a href="../login/menuPrintzipala.jsp">Menura itzuli</a>
+    <div class="container mt-5">
+        <div class="card form-container">
+            <h1>👤 Erabiltzailea Gehitu</h1>
+            
+            <% if (mezua != null) { %>
+                <div class="alert alert-success">
+                    <div class="alert-icon">✅</div>
+                    <div class="alert-content"><%= mezua %></div>
+                </div>
+            <% } %>
+            
+            <% if (errorea != null) { %>
+                <div class="alert alert-error">
+                    <div class="alert-icon">❌</div>
+                    <div class="alert-content"><%= errorea %></div>
+                </div>
+            <% } %>
+            
+            <form action="prozesatuErabiltzaileGehiketa.jsp" method="post" class="mt-4">
+                <div class="form-group">
+                    <label class="form-label">Sartu erabiltzaile berriaren izena:</label>
+                    <input type="text" name="erabiltzaileBerria" class="form-control" required 
+                           placeholder="Erabiltzaile izena...">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Sartu sortzeko erabiltzailearen pasahitza:</label>
+                    <input type="password" name="pasahitzaSortu" class="form-control" required 
+                           placeholder="Pasahitza...">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Berridatzi pasahitza:</label>
+                    <input type="password" name="pasahitzaKonfirmazioa" class="form-control" required 
+                           placeholder="Berridatzi pasahitza...">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="btn-icon">➕</span>
+                        Gehitu erabiltzailea
+                    </button>
+                    <a href="../login/menuPrintzipala.jsp" class="btn btn-outline">
+                        ← Utzi
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

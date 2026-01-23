@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* datuBase.css */
+.options-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.option-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    border-color: #3498db;
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.1);
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.option-card:hover a {
+    color: white;
+}
+
+.option-card a {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+}
+
+.option-card .option-number {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.option-card:hover .option-number {
+    background: white;
+    color: #3498db;
+}
+
+.warning-note {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 14px;
+}

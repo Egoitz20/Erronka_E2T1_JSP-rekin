@@ -11,21 +11,75 @@
 <html>
 <head>
     <title>Datuak Erakutsi</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/styles/global.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/styles/tablas.css">
 </head>
 <body>
-    <h1>Datuak Erakutsi</h1>
+    <div class="app-header">
+        <div class="header-content">
+            <a href="../login/menuPrintzipala.jsp" class="logo">
+                <div class="logo-icon">←</div>
+                <span>Datuak Erakutsi</span>
+            </a>
+        </div>
+    </div>
     
-    <h2>Aukeratu erakutsiko den taula:</h2>
-    
-    <ul>
-        <li><a href="erakutsiErabiltzaileak.jsp">1. Erabiltzaileak erakutsi</a></li>
-        <li><a href="erakutsiBezeroak.jsp">2. Bezeroak erakutsi</a></li>
-        <li><a href="erakutsiBiltegiak.jsp">3. Biltegiak erakutsi</a></li>
-        <li><a href="erakutsiProduktuak.jsp">4. Produktuak erakutsi</a></li>
-        <li><a href="erakutsiLangileak.jsp">5. Langileak erakutsi</a></li>
-    </ul>
-    
-    <br><br>
-    <a href="../login/menuPrintzipala.jsp">← Menura itzuli</a>
+    <div class="container mt-5">
+        <div class="card">
+            <h1>📊 Datuak Erakutsi</h1>
+            <p class="mb-4">Aukeratu erakutsiko den taula:</p>
+            
+            <div class="grid grid-2">
+                <div class="option-card">
+                    <a href="erakutsiErabiltzaileak.jsp">
+                        <span class="option-number">1</span>
+                        Erabiltzaileak
+                    </a>
+                    <p class="mt-2 text-gray">Sistemako erabiltzaile guztiak</p>
+                </div>
+                
+                <div class="option-card">
+                    <a href="erakutsiBezeroak.jsp">
+                        <span class="option-number">2</span>
+                        Bezeroak
+                    </a>
+                    <p class="mt-2 text-gray">Bezeroen datu-basea</p>
+                </div>
+                
+                <div class="option-card">
+                    <a href="erakutsiBiltegiak.jsp">
+                        <span class="option-number">3</span>
+                        Biltegiak
+                    </a>
+                    <p class="mt-2 text-gray">Biltegi eta almacenak</p>
+                </div>
+                
+                <div class="option-card">
+                    <a href="erakutsiProduktuak.jsp">
+                        <span class="option-number">4</span>
+                        Produktuak
+                    </a>
+                    <p class="mt-2 text-gray">Produktu eta eskaerak</p>
+                </div>
+                
+                <div class="option-card">
+                    <a href="erakutsiLangileak.jsp">
+                        <span class="option-number">5</span>
+                        Langileak
+                    </a>
+                    <p class="mt-2 text-gray">Langileen informazioa</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="../login/menuPrintzipala.jsp" class="btn btn-outline">
+                    ← Menura itzuli
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

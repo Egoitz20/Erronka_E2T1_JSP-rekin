@@ -12,21 +12,55 @@ String errorea = request.getParameter("errorea");
 <html>
 <head>
 <title>Datu-basea Eguneratu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/styles/global.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/styles/datuBase.css">
 </head>
 <body>
-	<h1>Datu-basea Eguneratu</h1>
-
-	<h2>Aukeratu ekintza bat:</h2>
-
-	<p>
-		<a href="exekutatuEremuaGehitu.jsp"> <strong>1. Eremua gehitu</strong></a>
-	</p>
-	<br>
-	<p>
-		<a href="exekutatuTaulaEguneratu.jsp"> <strong>2. Taula eguneratu</strong></a>
-	</p>
-
-	<br>
-	<a href="../login/menuPrintzipala.jsp">← Menura itzuli</a>
+    <div class="app-header">
+        <div class="header-content">
+            <a href="../login/menuPrintzipala.jsp" class="logo">
+                <div class="logo-icon">←</div>
+                <span>Datu-basea Eguneratu</span>
+            </a>
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        <div class="card options-container">
+            <h1>🔄 Datu-basea Eguneratu</h1>
+            <p class="mb-4">Aukeratu ekintza bat:</p>
+            
+            <div class="warning-note">
+                ⚠️ <strong>Kontuz:</strong> Ekintza hauek datu-basearen egitura alda dezakete.
+            </div>
+            
+            <div class="options-grid">
+                <div class="option-card">
+                    <a href="exekutatuEremuaGehitu.jsp">
+                        <span class="option-number">1</span>
+                        Eremua gehitu
+                    </a>
+                    <p class="mt-2 text-gray">SOLDATA eremua gehitu LANGILE taulan</p>
+                </div>
+                
+                <div class="option-card">
+                    <a href="exekutatuTaulaEguneratu.jsp">
+                        <span class="option-number">2</span>
+                        Taula eguneratu
+                    </a>
+                    <p class="mt-2 text-gray">Langileen soldatak eguneratu</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="../login/menuPrintzipala.jsp" class="btn btn-outline">
+                    ← Menura itzuli
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

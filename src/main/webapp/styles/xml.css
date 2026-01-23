@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* xml.css */
+.xml-container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.xml-preview {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 20px 0;
+    overflow-x: auto;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.xml-tag { color: #569cd6; }
+.xml-attr { color: #9cdcfe; }
+.xml-value { color: #ce9178; }
+.xml-comment { color: #6a9955; }
+.xml-text { color: #dcdcaa; }
+
+.xml-actions {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.btn-xml {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-view {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+}
+
+.btn-download {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+}
+
+.btn-xml:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

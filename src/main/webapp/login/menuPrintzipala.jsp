@@ -21,21 +21,73 @@
 <head>
 <meta charset="UTF-8">
 <title>Menu printzipala</title>
+<<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/styles/global.css">
+<link rel="stylesheet" href="<%= request.getContextPath() %>/styles/menu.css">
 </head>
 <body>
-	<div>
-        <h1>Menu Nagusia</h1>
-        <div>
-            <h2>Ongi etorri, <%= erabiltzailea %>!</h2>
+    <div class="app-header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">SG</div>
+                <span>GAMESTOP APLIKAZIOA</span>
+            </a>
+            <div class="user-info">
+                <span class="badge badge-primary"><%= erabiltzailea %></span>
+                <a href="./irten.jsp" class="btn btn-outline btn-sm">Irten</a>
+            </div>
         </div>
-        
-        <ul>
-            <li><a href="../erabiltzaileGehiketa/erabiltzaileaGehitu.jsp">1. Erabiltzailea gehitu</a></li>
-            <li><a href="../xml/xmlSortu.jsp">2. XML-a sortu</a></li>
-            <li><a href="../datuBaseEguneraketa/datuBaseEguneratu.jsp">3. Datu-basea eguneratu</a></li>
-            <li><a href="../taulakErakutsi/datuakErakutsi.jsp">4. Datuak erakutsi</a></li>
-            <li><a href="./irten.jsp">5. Irten</a></li>
-        </ul>
+    </div>
+    
+    <div class="container mt-5">
+        <div class="card">
+            <div class="text-center mb-5">
+                <h1>Menu Nagusia</h1>
+                <p class="text-muted">Aukeratu ekintza bat</p>
+            </div>
+            
+            <div class="grid grid-2">
+                <div class="option-card">
+                    <a href="../erabiltzaileGehiketa/erabiltzaileaGehitu.jsp">
+                        <span class="option-number">1</span>
+                        Erabiltzailea gehitu
+                    </a>
+                    <p class="mt-2 text-gray">Sistemako erabiltzaile berriak gehitu</p>
+                </div>
+                
+                <div class="option-card">
+                    <a href="../xml/xmlSortu.jsp">
+                        <span class="option-number">2</span>
+                        XML-a sortu
+                    </a>
+                    <p class="mt-2 text-gray">XML fitxategiak sortu eta deskargatu</p>
+                </div>
+                
+                <div class="option-card">
+                    <a href="../datuBaseEguneraketa/datuBaseEguneratu.jsp">
+                        <span class="option-number">3</span>
+                        Datu-basea eguneratu
+                    </a>
+                    <p class="mt-2 text-gray">Datu-basearen egitura aldatu</p>
+                </div>
+                
+                <div class="option-card">
+                    <a href="../taulakErakutsi/datuakErakutsi.jsp">
+                        <span class="option-number">4</span>
+                        Datuak erakutsi
+                    </p>
+                    <p class="mt-2 text-gray">Taulako datuak kontsultatu</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="./irten.jsp" class="btn btn-outline">
+                    🚪 Irten sistematik
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>

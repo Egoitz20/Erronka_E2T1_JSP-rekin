@@ -31,6 +31,8 @@
 <html>
 <head>
     <title>XML Ikusi</title>
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/styles/global.css">
+	<link rel="stylesheet" href="<%= request.getContextPath() %>/styles/xml.css">
     <style>
         pre {
             background-color: #f4f4f4;
