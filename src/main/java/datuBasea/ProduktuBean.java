@@ -1,4 +1,4 @@
-package datuBasea;
+package datubasea;
 
 import java.sql.Date;
 

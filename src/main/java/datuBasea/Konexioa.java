@@ -1,4 +1,4 @@
-package datuBasea;
+package datubasea;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -82,6 +82,22 @@ public class Konexioa {
 		return konexioa;
 	}
 
+//	public Connection konexioaBd2() throws Exception {
+//		Connection konexioa = null;
+//
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			konexioa = DriverManager.getConnection(url, erabiltzaile, pasahitza);
+//
+//			if (konexioa != null) {
+//				System.out.println("✅ Konexioa eginda! URL: " + url);
+//			} else {
+//				System.err.println("❌ Konexioa NULL da!");
+//			}
+//
+//		return konexioa;
+//	}
+
+	
 	/*
 	 * public Connection konektatu() { Connection konekzioa = null; try {
 	 * Class.forName("com.mysql.cj.jdbc.Driver"); String url =

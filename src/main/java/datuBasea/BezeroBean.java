@@ -1,4 +1,4 @@
-package datuBasea;
+package datubasea;
 
 /**
  * Sistemako Bezero (Kliente) entitatea irudikatzen duen JavaBean klasea.

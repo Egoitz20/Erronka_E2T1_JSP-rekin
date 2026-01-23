@@ -31,7 +31,7 @@
     
     if (onarpena.erabiltzaileOnarpena(erabiltzailea, pasahitza)) {
         // Login ona
-        session.removeAttribute("loginSaiakerak"); // Limpiar contador
+        session.removeAttribute("loginSaiakerak");
         session.setAttribute("erabiltzailea", erabiltzailea);
         response.sendRedirect("menuPrintzipala.jsp");
     } else {

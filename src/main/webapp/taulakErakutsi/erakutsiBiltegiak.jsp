@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="kontrolagailua.TaulakHandler" %>
-<%@ page import="datuBasea.BiltegiBean" %>
+<%@ page import="datubasea.BiltegiBean" %>
 <%@ page import="java.util.ArrayList" %>
 <%
 /**

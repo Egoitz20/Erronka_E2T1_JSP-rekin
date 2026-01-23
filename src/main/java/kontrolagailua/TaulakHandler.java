@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.*;
 import java.util.ArrayList;
 
-import datuBasea.BezeroBean;
-import datuBasea.BiltegiBean;
-import datuBasea.ErabiltzaileBean;
-import datuBasea.Konexioa;
-import datuBasea.LangileBean;
-import datuBasea.ProduktuBean;
+import datubasea.BezeroBean;
+import datubasea.BiltegiBean;
+import datubasea.ErabiltzaileBean;
+import datubasea.Konexioa;
+import datubasea.LangileBean;
+import datubasea.ProduktuBean;
 
 /**
  * Taula guztietako datuak berreskuratzeko Kontrolagailu nagusia.

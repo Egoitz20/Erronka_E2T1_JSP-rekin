@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import datuBasea.Konexioa;
+import datubasea.Konexioa;
 
 /**
  * Sistemako erabiltzaileak sortzeko kudeaketa egiten duen Kontrolagailu/DAO klasea.
@@ -42,9 +42,12 @@ public class ErabiltzaileGehiketaLiburutegia {
 
 		try {
 			konexioa = db.konexioaBd();
+			
 			// Zenbat ilara itzultzen du.
 			stmt = konexioa.prepareStatement(ERABILTZAILE_GEHIKETA);
 
+			//stmt.execute("insertErabiltzailea(?,?)");
+			
 			stmt.setString(1, izena); // Lehenengo interrogantean erabiltzailearen ipinitutako izena ipiniko da
 										// kontsultan
 			stmt.setString(2, pasahitza); // Bigarren interrogantean erabiltzailearen ipinitutako pasahitza ipiniko da

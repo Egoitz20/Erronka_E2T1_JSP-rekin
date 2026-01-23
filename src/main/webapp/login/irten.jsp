@@ -7,5 +7,5 @@
  * @redirect index.jsp
  */
     session.invalidate();
-    response.sendRedirect("index.jsp");
+    response.sendRedirect("../index.jsp");
 %>

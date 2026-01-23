@@ -1,4 +1,4 @@
-package datuBasea;
+package datubasea;
 
 /**
  * Sistemako Erabiltzaile entitatea irudikatzen duen JavaBean klasea.

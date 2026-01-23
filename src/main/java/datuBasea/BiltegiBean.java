@@ -1,4 +1,4 @@
-package datuBasea;
+package datubasea;
 
 /**
  * Sistemako Biltegi (Almacén) entitatea irudikatzen duen JavaBean klasea.

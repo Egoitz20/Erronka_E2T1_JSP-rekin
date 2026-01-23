@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import datuBasea.Konexioa;
+import datubasea.Konexioa;
 
 /**
  * Langileen informazioa duten XML dokumentuak sortzeko Kontrolagailu klasea.
